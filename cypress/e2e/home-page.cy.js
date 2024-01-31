@@ -4,6 +4,11 @@ describe("Home page", () => {
     cy.get("a").contains("Learn React").should("be.visible");
   });
 
+  it("text be visible", () => {
+    cy.visit("localhost:3000/");
+    cy.contains("Edit src/App.js and save to reload").should("be.visible");
+  });
+
   it("logo should be visible", () => {
     cy.visit("localhost:3000/");
     cy.get("img.App-logo").should("be.visible");
