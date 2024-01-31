@@ -26,6 +26,6 @@ jobs:
       - name: Percy run
         uses: percy/exec-action@v0.3.1
         with:
-          custom-command: "npm test"
+          custom-command: "percy:test"
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
