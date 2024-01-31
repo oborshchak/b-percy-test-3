@@ -1,0 +1,11 @@
+describe("Home page", () => {
+  it("link should be visible", () => {
+    cy.visit("localhost:3000/");
+    cy.contains("Learn React").should("be.visible");
+  });
+
+  it("logo should be visible", () => {
+    cy.visit("localhost:3000/");
+    cy.get("img.App-logo").should("be.visible");
+  });
+});
