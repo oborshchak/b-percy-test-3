@@ -13,4 +13,12 @@ describe("Home page", () => {
     cy.visit("localhost:3000/");
     cy.get("a").contains("Try React").should("be.visible");
   });
+
+  it("visual test of home page", () => {
+    cy.visit("localhost:3000/");
+    cy.get("img.App-logo").should("be.visible");
+
+    // Take a snapshot for visual diffing
+    cy.percySnapshot("Home Page");
+  });
 });

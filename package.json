@@ -19,7 +19,8 @@
     "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
     "cypress:open": "cypress open",
-    "cypress:test": "cypress run"
+    "cypress:test": "cypress run",
+    "percy:test": "percy exec -- cypress run"
   },
   "eslintConfig": {
     "extends": [
@@ -40,6 +41,8 @@
     ]
   },
   "devDependencies": {
+    "@percy/cli": "^1.27.7",
+    "@percy/cypress": "^3.1.2",
     "cypress": "^13.6.4"
   }
 }
